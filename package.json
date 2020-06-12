@@ -68,7 +68,7 @@
     "babel-preset-react": "6.22.0",
     "bowser": "1.9.4",
     "cheerio": "1.0.0-rc.2",
-    "chromedriver": "76.0.0",
+    "chromedriver": "83.0.0",
     "classnames": "2.2.5",
     "cookie": "0.4.1",
     "copy-webpack-plugin": "0.2.0",

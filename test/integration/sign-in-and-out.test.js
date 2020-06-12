@@ -17,6 +17,8 @@ let wwwURL = rootUrl;
 
 if (remote){
     jest.setTimeout(60000);
+} else {
+    jest.setTimeout(10000);
 }
 
 let driver;
@@ -35,7 +37,7 @@ describe('www-integration sign-in-and-out', () => {
 
         test('sign in on www', async () => {
             await driver.get(wwwURL);
-            await driver.sleep(1000);
+            await driver.sleep(500);
             await clickXpath('//li[@class="link right login-item"]/a');
             let name = await findByXpath('//input[@id="frc-username-1088"]');
             await name.sendKeys(username);
@@ -50,6 +52,7 @@ describe('www-integration sign-in-and-out', () => {
 
         test('sign in on scratchr2', async () => {
             await driver.get(scratchr2url);
+            await driver.sleep(500);
             await clickXpath('//li[@class="sign-in dropdown"]/span');
             let name = await findByXpath('//input[@id="login_dropdown_username"]');
             await name.sendKeys(username);
@@ -84,6 +87,7 @@ describe('www-integration sign-in-and-out', () => {
 
         test('sign out on scratchr2', async () => {
             await driver.get(scratchr2url);
+            await driver.sleep(500);
             await clickXpath('//span[@class="user-name dropdown-toggle"]');
             await clickXpath('//li[@id="logout"]');
             let element = await findByXpath('//li[@class="link right login-item"]/a/span');

@@ -67,8 +67,8 @@ class SeleniumHelper {
         // https://wiki.saucelabs.com/display/DOCS/Platform+Configurator
         let driverConfig = {
             browserName: 'chrome',
-            platform: 'macOS 10.14',
-            version: '76.0'
+            platform: 'macOS 10.15',
+            version: '83.0'
         };
         var driver = new webdriver.Builder()
             .withCapabilities({
