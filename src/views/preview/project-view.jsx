@@ -153,6 +153,8 @@ class Preview extends React.Component {
                 });
             }
         }
+        // detect that api request for project info has returned. If successful,
+        // request secondary data: studios, comments, etc.
         if (this.props.projectInfo.id !== prevProps.projectInfo.id) {
             if (typeof this.props.projectInfo.id === 'undefined') {
                 this.initCounts(0, 0);
@@ -226,8 +228,8 @@ class Preview extends React.Component {
     }
 
     // This is copy of what is in save-project-to-server in GUI that adds
-    // an extra get of the project info from api.  We  do this to wait for replication
-    // lag to pass.  This is intended to be a temporary fix until we use the data
+    // an extra get of the project info from api. We do this to wait for replication
+    // lag to pass. This is intended to be a temporary fix until we use the data
     // from the create request to fill the projectInfo state.
     handleUpdateProjectData (projectId, vmState, params) {
         const opts = {
@@ -383,7 +385,7 @@ class Preview extends React.Component {
     }
     handleToggleComments () {
         this.props.updateProject(
-            this.props.projectInfo.id,
+            this.state.projectId,
             {comments_allowed: !this.props.projectInfo.comments_allowed},
             this.props.user.username,
             this.props.user.token
@@ -478,7 +480,7 @@ class Preview extends React.Component {
     }
     handleGreenFlag () {
         if (!this.state.greenFlagRecorded) {
-            this.props.logProjectView(this.props.projectInfo.id, this.props.authorUsername, this.props.user.token);
+            this.props.logProjectView(this.state.projectId, this.props.authorUsername, this.props.user.token);
         }
         this.setState({
             showUsernameBlockAlert: false,
@@ -533,7 +535,7 @@ class Preview extends React.Component {
             this.props.toggleStudio(
                 (studio.includesProject === false),
                 studio.id,
-                this.props.projectInfo.id,
+                this.state.projectId,
                 this.props.user.token
             );
         }
@@ -543,7 +545,7 @@ class Preview extends React.Component {
 
         this.props.setFavedStatus(
             !this.props.faved,
-            this.props.projectInfo.id,
+            this.state.projectId,
             this.props.user.username,
             this.props.user.token
         );
@@ -573,7 +575,7 @@ class Preview extends React.Component {
 
         this.props.setLovedStatus(
             !this.props.loved,
-            this.props.projectInfo.id,
+            this.state.projectId,
             this.props.user.username,
             this.props.user.token
         );
@@ -610,7 +612,7 @@ class Preview extends React.Component {
     }
     handleShare () {
         this.props.shareProject(
-            this.props.projectInfo.id,
+            this.state.projectId,
             this.props.user.token
         );
         this.setState({
@@ -620,7 +622,7 @@ class Preview extends React.Component {
     }
     handleUpdateProjectTitle (title) {
         this.props.updateProject(
-            this.props.projectInfo.id,
+            this.state.projectId,
             {title: title},
             this.props.user.username,
             this.props.user.token
@@ -659,7 +661,7 @@ class Preview extends React.Component {
         history.pushState('', document.title, window.location.pathname + window.location.search);
         this.setState({singleCommentId: null});
         this.props.handleSeeAllComments(
-            this.props.projectInfo.id,
+            this.state.projectId,
             this.props.authorUsername,
             this.props.isAdmin,
             this.props.user.token
