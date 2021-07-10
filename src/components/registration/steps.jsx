@@ -979,12 +979,12 @@ class AddressStep extends React.Component {
                         />
                         {stateOptions.length > 2 ?
                             <Select
-                                required
                                 label={
                                     this.props.intl.formatMessage({id: 'teacherRegistration.stateProvince'})
                                 }
                                 name="address.state"
                                 options={stateOptions}
+                                required={(this.state.countryChoice === 'us')}
                             /> : []
                         }
                         <b className="row-label">

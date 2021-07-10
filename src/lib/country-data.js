@@ -85,7 +85,8 @@ const countryInfo = module.exports.countryInfo = [
     },
     {
         name: 'Bangladesh',
-        code: 'bd'
+        code: 'bd',
+        majorRegionType: 'division'
     },
     {
         name: 'Barbados',
@@ -1036,7 +1037,7 @@ const countryOptions = module.exports.countryOptions = (startingCountryInfo, val
     ))
 );
 
-module.exports.lookupCountryByCode = countryCode => (
+const lookupCountryByCode = module.exports.lookupCountryByCode = countryCode => (
     countryInfo.find(country => country.code === countryCode)
 );
 
@@ -1108,11 +1109,24 @@ module.exports.registrationCountryCodeOptions =
  * ]
  */
 module.exports.subdivisionOptions = Object.keys(isoCountryRawData).reduce((subByCountry, code) => {
-    subByCountry[code.toLowerCase()] = Object.keys(isoCountryRawData[code].sub).map(subCode => ({
-        value: subCode.toLowerCase(),
-        label: isoCountryRawData[code].sub[subCode].name,
-        type: isoCountryRawData[code].sub[subCode].type
-    }))
+    const country = lookupCountryByCode(code.toLowerCase());
+    subByCountry[code.toLowerCase()] = Object.keys(isoCountryRawData[code].sub)
+        .filter(subCode => { // only include subdivisions that are analogous to states
+            const majorRegionType = country && country.majorRegionType;
+            // Data for some countries includes both major divisions (analogous to US states)
+            // and minor divisions, municipalities, etc.
+            // If we don't know which subdivisions of this country are "major", include all of them.
+            return !majorRegionType ||
+                (
+                    isoCountryRawData[code].sub[subCode].type &&
+                    isoCountryRawData[code].sub[subCode].type.toLowerCase()
+                ) === majorRegionType.toLowerCase();
+        })
+        .map(subCode => ({
+            value: subCode.toLowerCase(),
+            label: isoCountryRawData[code].sub[subCode].name,
+            type: isoCountryRawData[code].sub[subCode].type
+        }))
         .sort((a, b) => {
             if (a.label < b.label) {
                 return -1;

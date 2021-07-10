@@ -25,7 +25,7 @@
     "teacherRegistration.addressLine1": "Address Line 1",
     "teacherRegistration.addressLine2": "Address Line 2 (Optional)",
     "teacherRegistration.zipCode": "ZIP",
-    "teacherRegistration.stateProvince": "State",
+    "teacherRegistration.stateProvince": "State / Region",
     "teacherRegistration.city": "City",
     "teacherRegistration.addressStepTitle": "Address",
     "teacherRegistration.useScratchStepTitle": "How you plan to use Scratch",
