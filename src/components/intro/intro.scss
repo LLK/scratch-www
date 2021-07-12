@@ -8,12 +8,12 @@
     padding: 0;
     justify-content: space-between;
     background-color: $ui-white;
-    
+
     .intro-container {
         min-height: 24rem;
         justify-content: space-between;
         background-color: $ui-blue;
-        background-size: auto;
+        background-size: 624px 325px;
         background-repeat: no-repeat;
         background-position: right;
         background-image: url("/svgs/intro/background-cropped.svg");
@@ -27,22 +27,22 @@
         margin-left: 5%;
         min-height: 20rem;
     }
-    
+
     .intro-video-container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex: 0 0 29rem;
-        
+
         .intro-video {
             margin-right: 4rem;
         }
-        
+
         .video-image {
             position: relative;
             cursor: pointer;
             margin-right: 4rem;
-            
+
             .watch-button {
                 position: absolute;
                 bottom: 0;
@@ -56,7 +56,7 @@
                 font-size: 1rem;
             }
         }
-        
+
         &:after {
             display: block;
             position: absolute;
@@ -84,7 +84,7 @@
         padding: .625rem .75rem;
         font-size: 1rem;
         margin-right: .75rem;
-        
+
         &.create-button:before {
             display: inline-block;
             margin-right: .5rem;
@@ -97,7 +97,7 @@
             vertical-align: -.35rem;
             content: "";
         }
-        
+
         &.join-button:before {
             display: inline-block;
             margin-right: .5rem;
@@ -111,11 +111,11 @@
             content: "";
         }
     }
-    
+
     .intro-subnav {
         justify-content: center;
         background-color: $ui-blue-10percent;
-        
+
         .subnav-button {
             margin: .625rem .5rem;
             padding: .5rem 1.5rem;
@@ -143,28 +143,28 @@ $tabletLandscape: 1024px;
 @media only screen and (min-width: $mobile) and (max-width: $rowLayoutMin - 1) {
     .intro-banner {
         justify-content: flex-start;
-        
+
         .intro-header {
             margin-top: 1.75rem;
             font-size: 1.5rem;
         }
-        
+
         .intro-container {
             flex-direction: column;
             background-position: bottom 32px right 50%;
             background-size: 40rem;
             background-image: url("/svgs/intro/background.svg");
-            
+
             .intro-content {
                 align-items: center;
                 min-height: 8rem;
                 margin: 0;
             }
         }
-        
+
         .intro-video-container {
             flex: 0 0 24rem;
-            
+
             .video-image,
             .video-player {
                 margin: 0;
@@ -172,7 +172,7 @@ $tabletLandscape: 1024px;
             &:after {
                 display: none;
             }
-            
+
         }
     }
 }
@@ -182,19 +182,19 @@ $tabletLandscape: 1024px;
     .intro-subnav {
         flex-direction: row; // override flexrow default
     }
-    
+
 }
 
 @media only screen and (max-width: $mobile - 1) {
     .intro-banner {
         .intro-container {
             background-image: none;
-            
+
             .intro-content.column {
                 margin: auto 5%;
                 align-items: center;
             }
-            
+
             .intro-header {
                 font-size: 1.5rem;
             }
@@ -203,5 +203,5 @@ $tabletLandscape: 1024px;
             }
         }
     }
-    
+
 }
