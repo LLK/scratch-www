@@ -1,0 +1,189 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 99
+  versioning-strategy: increase-if-necessary
+  ignore:
+  - dependency-name: "@sentry/browser"
+    versions:
+    - 6.0.2
+    - 6.0.3
+    - 6.0.4
+    - 6.1.0
+    - 6.2.0
+    - 6.2.1
+    - 6.2.2
+    - 6.2.3
+    - 6.2.4
+    - 6.2.5
+    - 6.3.0
+    - 6.3.1
+    - 6.3.2
+    - 6.3.3
+  - dependency-name: scratch-gui
+    versions:
+    - 0.1.0-prerelease.20210409040605
+    - 0.1.0-prerelease.20210428083952
+  - dependency-name: scratch-storage
+    versions:
+    - 1.3.3
+  - dependency-name: scratch-l10n
+    versions:
+    - 3.11.20210420031536
+  - dependency-name: tap
+    versions:
+    - 14.11.0
+    - 15.0.0
+    - 15.0.1
+    - 15.0.2
+    - 15.0.3
+    - 15.0.4
+  - dependency-name: css-loader
+    versions:
+    - 5.0.1
+    - 5.0.2
+    - 5.1.0
+    - 5.1.1
+    - 5.1.2
+    - 5.1.3
+    - 5.1.4
+    - 5.2.0
+    - 5.2.1
+    - 5.2.4
+  - dependency-name: eslint-plugin-react
+    versions:
+    - 7.22.0
+    - 7.23.0
+    - 7.23.1
+  - dependency-name: classnames
+    versions:
+    - 2.2.6
+    - 2.3.0
+  - dependency-name: html-webpack-plugin
+    versions:
+    - 2.30.1
+    - 3.2.0
+    - 4.5.2
+  - dependency-name: copy-webpack-plugin
+    versions:
+    - 4.6.0
+    - 6.4.1
+    - 8.0.0
+  - dependency-name: ajv
+    versions:
+    - 7.0.3
+    - 7.0.4
+    - 7.1.0
+    - 7.1.1
+    - 7.2.0
+    - 7.2.1
+  - dependency-name: file-loader
+    versions:
+    - 6.2.0
+  - dependency-name: react-modal
+    versions:
+    - 3.12.1
+  - dependency-name: postcss-loader
+    versions:
+    - 3.0.0
+  - dependency-name: node-dir
+    versions:
+    - 0.1.17
+  - dependency-name: react
+    versions:
+    - 16.14.0
+    - 17.0.1
+  - dependency-name: slick-carousel
+    versions:
+    - 1.7.1
+  - dependency-name: compression
+    versions:
+    - 1.7.4
+  - dependency-name: lodash.isarray
+    versions:
+    - 4.0.0
+  - dependency-name: lodash.clone
+    versions:
+    - 4.5.0
+  - dependency-name: google-libphonenumber
+    versions:
+    - 3.2.16
+    - 3.2.17
+  - dependency-name: eslint
+    versions:
+    - 6.8.0
+  - dependency-name: chromedriver
+    versions:
+    - 88.0.0
+    - 89.0.0
+  - dependency-name: react-slick
+    versions:
+    - 0.28.0
+  - dependency-name: source-map-support
+    versions:
+    - 0.5.19
+  - dependency-name: watch
+    versions:
+    - 1.0.2
+  - dependency-name: json-loader
+    versions:
+    - 0.5.7
+  - dependency-name: sass-loader
+    versions:
+    - 6.0.7
+    - 7.3.1
+  - dependency-name: react-intl
+    versions:
+    - 2.9.0
+    - 5.13.2
+  - dependency-name: query-string
+    versions:
+    - 6.13.8
+    - 6.14.0
+    - 6.14.1
+  - dependency-name: webpack
+    versions:
+    - 3.12.0
+  - dependency-name: npm
+    versions:
+    - 7.5.2
+    - 7.5.3
+    - 7.5.4
+  - dependency-name: "@formatjs/intl-relativetimeformat"
+    versions:
+    - 8.0.4
+  - dependency-name: autoprefixer
+    versions:
+    - 9.8.6
+  - dependency-name: react-helmet
+    versions:
+    - 5.2.1
+  - dependency-name: webpack-cli
+    versions:
+    - 4.5.0
+  - dependency-name: eslint-config-scratch
+    versions:
+    - 6.0.0
+    - 7.0.0
+  - dependency-name: formsy-react
+    versions:
+    - 1.1.5
+  - dependency-name: react-dom
+    versions:
+    - 16.13.0
+  - dependency-name: react-responsive
+    versions:
+    - 6.0.0
+  - dependency-name: formik
+    versions:
+    - 1.5.8
+  - dependency-name: webpack-dev-middleware
+    versions:
+    - 2.0.6
+  - dependency-name: style-loader
+    versions:
+    - 0.23.1
