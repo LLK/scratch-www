@@ -15,9 +15,6 @@ const Select = require('../../components/forms/select.jsx');
 const TitleBanner = require('../../components/title-banner/title-banner.jsx');
 const Tabs = require('../../components/tabs/tabs.jsx');
 
-const Page = require('../../components/page/www/page.jsx');
-const render = require('../../lib/render.jsx');
-
 const ACCEPTABLE_MODES = ['trending', 'popular'];
 
 require('./search.scss');
@@ -57,23 +54,26 @@ class Search extends React.Component {
 
     }
     componentDidMount () {
+        const term = this.getSearchTermFromURL();
+        this.props.dispatch(navigationActions.setSearchTerm(term));
+    }
+    componentDidUpdate (prevProps) {
+        if (this.props.searchTerm !== prevProps.searchTerm) {
+            this.handleGetSearchMore();
+        }
+    }
+    getSearchTermFromURL () {
         // just in case there's a URL in the wild with pluses to indicate spaces,
         // convert pluses to url-encoded spaces before decoding.
         const query = decodeURIComponent(window.location.search.split('+').join('%20'));
-        let term = query;
-
-        const stripQueryValue = function (queryTerm) {
-            const queryIndex = query.indexOf('q=');
-            if (queryIndex !== -1) {
-                queryTerm = query.substring(queryIndex + 2, query.length).toLowerCase();
-            }
-            return queryTerm;
-        };
-        // Strip off the initial "?q="
-        term = stripQueryValue(term);
-        // Strip off user entered "?q="
-        term = stripQueryValue(term);
-
+        return this.getSearchTermFromQuery(query);
+    }
+    getSearchTermFromQuery (queryStr) {
+        const queryIndex = queryStr.indexOf('q=');
+        if (queryIndex === -1) { // q= parameter not found
+            return '';
+        }
+        let term = queryStr.substring(queryIndex + 2, queryStr.length).toLowerCase();
         while (term.indexOf('/') > -1) {
             term = term.substring(0, term.indexOf('/'));
         }
@@ -86,12 +86,7 @@ class Search extends React.Component {
             // Error means that term was not URI encoded and decoding failed.
             // We can silence this error because not all query strings are intended to be decoded.
         }
-        this.props.dispatch(navigationActions.setSearchTerm(term));
-    }
-    componentDidUpdate (prevProps) {
-        if (this.props.searchTerm !== prevProps.searchTerm) {
-            this.handleGetSearchMore();
-        }
+        return term;
     }
     encodeSearchTerm () {
         let termText = '';
@@ -266,10 +261,4 @@ const mapStateToProps = state => ({
 });
 
 const WrappedSearch = injectIntl(Search);
-const ConnectedSearch = connect(mapStateToProps)(WrappedSearch);
-
-render(
-    <Page><ConnectedSearch /></Page>,
-    document.getElementById('app'),
-    {navigation: navigationActions.navigationReducer}
-);
+module.exports = connect(mapStateToProps)(WrappedSearch);

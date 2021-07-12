@@ -250,7 +250,7 @@
         "name": "search",
         "pattern": "^/search/:projects/?$",
         "routeAlias": "/search",
-        "view": "search/search",
+        "view": "search/searchPage",
         "title": "Search"
     },
     {
