@@ -31,6 +31,8 @@
         <!-- Favicon & CSS normalize -->
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/css/lib/normalize.min.css" />
+        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.common.css[0] %>" />
+        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.route.name].css[0] %>" />
 
         <!-- Polyfills -->
         <script src="/js/polyfill.min.js"></script>
