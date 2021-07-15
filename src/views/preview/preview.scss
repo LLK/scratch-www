@@ -669,3 +669,20 @@ $stage-width: 480px;
         }
     }
 }
+
+#view {
+    min-height: 80%;
+}
+
+html, body, #app, .page {
+    height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.hidden {
+    display: none;
+}

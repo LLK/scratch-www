@@ -15,7 +15,7 @@ const getScratchWikiLink = require('../../../lib/scratch-wiki');
 require('./footer.scss');
 
 const Footer = props => (
-    <FooterBox>
+    <FooterBox hidden={props.isFullScreen}>
         <MediaQuery maxWidth={frameless.mobileIntermediate - 1}>
             <div className="lists">
                 <dl>
@@ -219,12 +219,19 @@ const Footer = props => (
 
 Footer.propTypes = {
     intl: intlShape.isRequired,
-    scratchWikiLink: PropTypes.string
+    scratchWikiLink: PropTypes.string,
+    isFullScreen: PropTypes.bool
 };
 
-const mapStateToProps = (state, ownProps) => ({
-    scratchWikiLink: getScratchWikiLink(ownProps.intl.locale)
-});
+const mapStateToProps = (state, ownProps) => {
+    const result = {
+        scratchWikiLink: getScratchWikiLink(ownProps.intl.locale)
+    };
+    if (state.scratchGui) {
+        result.isFullScreen = state.scratchGui.mode.isFullScreen;
+    }
+    return result;
+};
 
 const ConnectedFooter = connect(mapStateToProps)(Footer);
 module.exports = injectIntl(ConnectedFooter);
