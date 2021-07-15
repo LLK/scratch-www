@@ -32,7 +32,10 @@ const CensoredMessage = ({censoredByCommunity, messageHTML, reshareable}) => (
             ) : (
                 // if message is blank or missing, use default
                 <React.Fragment>
-                    <FormattedMessage id="project.defaultCensoredMessage" />
+                    <FormattedMessage
+                        id="project.defaultCensoredMessage"
+                        values={{communityGuidelinesLink: communityGuidelinesLink}}
+                    />
                     <br />
                     <br />
                     {reshareable ? (

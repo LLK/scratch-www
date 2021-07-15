@@ -30,7 +30,7 @@
     "project.notesAndCreditsLabel": "Notes and Credits",
     "project.credit": "Thanks to {userLink} for the original project {projectLink}.",
     "project.deletedBanner": "Note: This project is in the trash folder",
-    "project.defaultCensoredMessage": "This project was removed by the Scratch Team because it was disrespectful, inappropriate for all ages, or otherwise breaks the Scratch community guidelines.",
+    "project.defaultCensoredMessage": "This project was removed by the Scratch Team because it was disrespectful, inappropriate for all ages, or otherwise breaks the Scratch {communityGuidelinesLink}.",
     "project.communityCensoredMessage": "Your project has been temporarily un-shared because multiple people reported it as inappropriate.",
     "project.willReviewCensoredMessage": "The Scratch Team will review the project based on the {communityGuidelinesLink}, and either restore the project or confirm the censorship.",
     "project.tempCensoredMessage": "Please read the {communityGuidelinesLink} and be sure to edit the project to make sure it's respectful before resharing it.",
