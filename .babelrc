@@ -1,7 +1,8 @@
 {
     "plugins": [
         "transform-object-rest-spread",
-        "transform-require-context"
+        "transform-require-context",
+        "syntax-dynamic-import"
     ],
     "presets": ["es2015", "react"],
 }

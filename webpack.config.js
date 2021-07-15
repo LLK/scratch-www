@@ -72,7 +72,8 @@ module.exports = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'js/[name].bundle.js'
+        filename: 'js/[name].bundle.js',
+        publicPath: '/'
     },
     resolve: {
         symlinks: false // Fix local development with `npm link` packages

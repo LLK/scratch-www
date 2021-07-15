@@ -59,11 +59,11 @@
         <div id="app"></div>
 
         <!-- Vendor & Initialize (Session & Localization)-->
-        <script src="/<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
 
         <!-- Scripts -->
         <script src="/js/<%= htmlWebpackPlugin.options.route.name %>.intl.js"></script>
-        <script src="/<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.route.name].entry %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.route.name].entry %>"></script>
 
         <!-- Translate title element -->
         <% if (!htmlWebpackPlugin.options.dynamicMetaTags) { %>

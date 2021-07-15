@@ -1,16 +1,14 @@
-const Plotly = require('plotly.js/lib/core');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Plotly from 'plotly.js/lib/core';
+import choropleth from 'plotly.js/lib/choropleth';
+import createPlotlyComponent from 'react-plotly.js/factory';
 
 // Load in the trace type for choropleth
-Plotly.register([
-    require('plotly.js/lib/choropleth')
-]);
+Plotly.register([choropleth]);
 
 // create plotly bundle that only has choropleth plots
-import createPlotlyComponent from 'react-plotly.js/factory';
 const Plot = createPlotlyComponent(Plotly);
-
-const React = require('react');
-const PropTypes = require('prop-types');
 
 const WorldMap = props => (
     <Plot
@@ -86,4 +84,4 @@ WorldMap.propTypes = {
     countryNames: PropTypes.arrayOf(PropTypes.string)
 };
 
-module.exports = WorldMap;
+export default WorldMap;
