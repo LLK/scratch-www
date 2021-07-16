@@ -59,7 +59,7 @@ class Search extends React.Component {
     componentDidMount () {
         // just in case there's a URL in the wild with pluses to indicate spaces,
         // convert pluses to url-encoded spaces before decoding.
-        const query = decodeURIComponent(window.location.search.split('+').join('%20'));
+        const query = window.location.search.split('+').join('%20');
         let term = query;
 
         const stripQueryValue = function (queryTerm) {
