@@ -94,7 +94,7 @@
     "git-bundle-sha": "0.0.2",
     "glob": "5.0.15",
     "google-libphonenumber": "3.2.18",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^4.5.2",
     "iso-3166-2": "0.4.0",
     "jest": "^23.6.0",
     "jest-junit": "12.0.0",
