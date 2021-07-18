@@ -103,7 +103,7 @@
     "lodash.defaultsdeep": "4.6.1",
     "lodash.merge": "4.6.2",
     "lodash.mergewith": "4.6.2",
-    "lodash.omit": "3.1.0",
+    "lodash.omit": "4.5.0",
     "lodash.uniqby": "4.7.0",
     "minilog": "2.0.8",
     "node-sass": "4.14.1",
