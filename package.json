@@ -77,7 +77,7 @@
     "chromedriver": "91.0.1",
     "classnames": "2.2.5",
     "cookie": "0.4.1",
-    "copy-webpack-plugin": "^4.5.1",
+    "copy-webpack-plugin": "^6.4.1",
     "css-loader": "0.23.1",
     "email-validator": "2.0.4",
     "enzyme": "3.10.0",
