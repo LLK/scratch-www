@@ -71,7 +71,7 @@
     "babel-loader": "7.1.0",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-plugin-transform-require-context": "0.1.1",
-    "babel-preset-es2015": "6.22.0",
+    "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.22.0",
     "bowser": "1.9.4",
     "chromedriver": "91.0.1",
