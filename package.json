@@ -131,7 +131,7 @@
     "scratch-l10n": "3.13.20210718031500",
     "selenium-webdriver": "3.6.0",
     "slick-carousel": "1.6.0",
-    "style-loader": "0.12.3",
+    "style-loader": "2.0.0",
     "tap": "14.11.0",
     "url-loader": "2.3.0",
     "webpack": "^4.46.0",
