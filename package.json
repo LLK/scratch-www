@@ -54,7 +54,7 @@
     "express-http-proxy": "1.1.0",
     "lodash.defaults": "4.0.1",
     "lodash.get": "^4.4.2",
-    "react-helmet": "5.2.0",
+    "react-helmet": "6.1.0",
     "react-router-dom": "^5.2.0",
     "scratch-parser": "^5.0.0",
     "scratch-storage": "^0.5.1"
