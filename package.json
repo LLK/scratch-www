@@ -120,7 +120,7 @@
     "react-plotly.js": "2.4.0",
     "react-redux": "5.0.7",
     "react-responsive": "3.0.0",
-    "react-slick": "0.16.0",
+    "react-slick": "0.28.1",
     "react-string-replace": "0.4.1",
     "react-telephone-input": "4.3.4",
     "redux": "3.5.2",
