@@ -80,7 +80,7 @@
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "0.23.1",
     "email-validator": "2.0.4",
-    "enzyme": "3.10.0",
+    "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.14.0",
     "eslint": "5.16.0",
     "eslint-config-scratch": "7.0.0",
