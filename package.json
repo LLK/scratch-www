@@ -111,7 +111,7 @@
     "plotly.js": "1.47.4",
     "postcss-loader": "2.0.10",
     "prop-types": "15.6.0",
-    "query-string": "^5.1.1",
+    "query-string": "^7.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-intl": "2.8.0",
