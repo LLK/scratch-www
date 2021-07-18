@@ -51,7 +51,7 @@
     "bunyan": "1.7.1",
     "clipboard-copy": "2.0.1",
     "express": "4.16.1",
-    "express-http-proxy": "1.1.0",
+    "express-http-proxy": "1.6.2",
     "lodash.defaults": "4.0.1",
     "lodash.get": "^4.4.2",
     "react-helmet": "5.2.0",
