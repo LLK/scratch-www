@@ -90,7 +90,7 @@
     "fastly": "1.2.1",
     "formik": "1.5.4",
     "formsy-react": "1.1.4",
-    "formsy-react-components": "1.0.0",
+    "formsy-react-components": "1.1.0",
     "git-bundle-sha": "0.0.2",
     "glob": "5.0.15",
     "google-libphonenumber": "3.2.18",
