@@ -115,7 +115,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-intl": "2.8.0",
-    "react-modal": "3.11.1",
+    "react-modal": "3.14.3",
     "react-onclickoutside": "6.7.1",
     "react-plotly.js": "2.4.0",
     "react-redux": "5.0.7",
