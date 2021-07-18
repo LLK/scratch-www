@@ -88,7 +88,7 @@
     "eslint-plugin-react": "7.14.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fastly": "1.2.1",
-    "formik": "1.5.4",
+    "formik": "2.2.9",
     "formsy-react": "1.1.4",
     "formsy-react-components": "1.0.0",
     "git-bundle-sha": "0.0.2",
