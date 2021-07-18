@@ -108,7 +108,7 @@
     "minilog": "2.0.8",
     "node-sass": "4.14.1",
     "pako": "0.2.8",
-    "plotly.js": "1.47.4",
+    "plotly.js": "2.2.1",
     "postcss-loader": "2.0.10",
     "prop-types": "15.6.0",
     "query-string": "^5.1.1",
