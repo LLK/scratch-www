@@ -57,7 +57,7 @@
     "react-helmet": "5.2.0",
     "react-router-dom": "^5.2.0",
     "scratch-parser": "^5.0.0",
-    "scratch-storage": "^0.5.1"
+    "scratch-storage": "^1.3.5"
   },
   "devDependencies": {
     "@formatjs/intl-locale": "^2.4.13",
