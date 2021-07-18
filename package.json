@@ -82,7 +82,7 @@
     "email-validator": "2.0.4",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
-    "eslint": "5.16.0",
+    "eslint": "6.8.0",
     "eslint-config-scratch": "7.0.0",
     "eslint-plugin-json": "2.0.1",
     "eslint-plugin-react": "7.14.2",
