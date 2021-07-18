@@ -105,7 +105,7 @@
     "lodash.mergewith": "4.6.2",
     "lodash.omit": "3.1.0",
     "lodash.uniqby": "4.7.0",
-    "minilog": "2.0.8",
+    "minilog": "3.1.0",
     "node-sass": "4.14.1",
     "pako": "0.2.8",
     "plotly.js": "1.47.4",
