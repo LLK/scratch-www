@@ -138,7 +138,7 @@
     "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^3.1.0",
     "webpack-dev-middleware": "2.0.4",
-    "xhr": "2.2.0"
+    "xhr": "2.6.0"
   },
   "jest": {
     "setupFiles": [
